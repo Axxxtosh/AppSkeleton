@@ -16,6 +16,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".Skeleton.ui.Main2Activity" />
+        <activity android:name=".Skeleton.ui.Feature1.TestActivity"></activity>
     </application>
 
 </manifest>

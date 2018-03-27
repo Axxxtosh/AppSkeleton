@@ -5,7 +5,7 @@ import android.content.Context;
 
 import com.uriahsolution.Skeleton.MyApp;
 import com.uriahsolution.Skeleton.data.SharedPrefsHelper;
-import com.uriahsolution.Skeleton.di.module.ApplicationModule;
+import com.uriahsolution.Skeleton.di.module.AppModule;
 
 import javax.inject.Singleton;
 
@@ -17,8 +17,8 @@ import dagger.Component;
 
 
 @Singleton
-@Component(modules = ApplicationModule.class)
-public interface ApplicationComponent {
+@Component(modules = AppModule.class)
+public interface AppComponent {
 
     void inject(MyApp myApp);
 

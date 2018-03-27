@@ -6,6 +6,8 @@ import android.content.SharedPreferences;
 
 import com.uriahsolution.Skeleton.di.ApplicationContext;
 
+import javax.inject.Singleton;
+
 import dagger.Module;
 import dagger.Provides;
 
@@ -14,11 +16,11 @@ import dagger.Provides;
  */
 
 @Module
-public class ApplicationModule {
+public class AppModule {
 
     private final Application mApplication;
 
-    public ApplicationModule(Application app) {
+    public AppModule(Application app) {
         mApplication = app;
     }
 
@@ -29,12 +31,14 @@ public class ApplicationModule {
     }
 
     @Provides
+    @Singleton
     Application provideApplication() {
         return mApplication;
     }
 
     @Provides
-    SharedPreferences provideSharedPrefs() {
-        return mApplication.getSharedPreferences("demo-prefs", Context.MODE_PRIVATE);
+    @Singleton
+    SharedPreferences provideSharedPrefs(Context app) {
+        return app.getSharedPreferences("demo-prefs", Context.MODE_PRIVATE);
     }
 }

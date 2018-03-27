@@ -8,7 +8,7 @@ import dagger.Component;
  * Created by Ashutosh Makwana at Uriah Solution Pvt Ltd on 24-03-2018.
  */
 
-@Component(modules={NetModule.class})
+@Component(modules={AppComponent.class,NetModule.class})
 public interface NetComponent {
 
 

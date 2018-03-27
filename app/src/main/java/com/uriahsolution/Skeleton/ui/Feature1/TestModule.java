@@ -2,6 +2,7 @@ package com.uriahsolution.Skeleton.ui.Feature1;
 
 import android.app.Activity;
 import android.content.Context;
+import android.support.v4.app.Fragment;
 
 import com.uriahsolution.Skeleton.di.ActivityContext;
 
@@ -16,20 +17,27 @@ import dagger.Provides;
 public class TestModule {
 
     private Activity mActivity;
+    private TestFragment testFragment;
 
     public TestModule(Activity activity) {
         mActivity = activity;
     }
 
     @Provides
-    @ActivityContext
     Context provideContext() {
         return mActivity;
     }
 
     @Provides
-    Activity provideActivity() {
+    Activity provideActivity()
+    {
         return mActivity;
+    }
+
+    @Provides
+    Fragment provideTestFragment(){
+
+        return new TestFragment();
     }
 
 

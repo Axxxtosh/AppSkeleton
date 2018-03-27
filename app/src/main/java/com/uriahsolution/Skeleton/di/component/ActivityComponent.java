@@ -11,7 +11,7 @@ import dagger.Component;
  */
 
 @ActivityScoped
-@Component(dependencies = ApplicationComponent.class, modules = TestModule.class)
+@Component(dependencies = AppComponent.class, modules = TestModule.class)
 public interface ActivityComponent {
 
     void inject(TestActivity mainActivity);

@@ -9,7 +9,9 @@ import android.view.ViewGroup;
 
 import com.uriahsolution.R;
 
-public class TestFragment extends Fragment implements TestContract.View {
+import dagger.android.support.DaggerFragment;
+
+public class TestFragment extends DaggerFragment implements TestContract.View {
 
 
     TestPresenter testPresenter;

@@ -10,6 +10,7 @@ public class TestPresenter implements TestContract.Presenter {
 
     @Nullable
     private TestContract.View testView;
+    private boolean mFirstLoad = true;
 
 
     public void takeView(TestContract.View view) {
